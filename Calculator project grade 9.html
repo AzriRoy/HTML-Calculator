@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<center>
+<input type="text" id="num1"><br><br>
+
+<input type="button" value="round" onClick="round()">
+<input type="button" value="ceil" onClick="round2()">
+<input type="button" value="floor" onClick="round3()">
+<input type="button" value="trunc" onClick="tcrn()"><br>
+<input type="button" value="√" onClick="radikal()">
+<input type="button" value="power" onClick="power()">
+<input type="button" value="abs" onClick="abss()"><br>
+<input type="button" value="log" onClick="llag()">
+<input type="button" value="log2" onClick="lllag()">
+<input type="button" value="log10" onClick="llllag()"><br>
+<input type="button" value="sin" onClick="ssen()">
+<input type="button" value="cos" onClick="kos()">
+<br><br>
+
+<input type="button" value="1" onClick="n1()">
+<input type="button" value="2" onClick="n2()">
+<input type="button" value="3" onClick="n3()"><br>
+<input type="button" value="4" onClick="n4()">
+<input type="button" value="5" onClick="n5()">
+<input type="button" value="6" onClick="n6()"><br>
+<input type="button" value="7" onClick="n7()">
+<input type="button" value="8" onClick="n8()">
+<input type="button" value="9" onClick="n9()"><br>
+<input type="button" value="0" onClick="n0()">
+<input type="button" value="." onClick="ndot()">
+<br><br>
+
+<input type="button" value=" x " onClick="never()">
+<input type="button" value=" ÷ " onClick="gonna()">
+<input type="button" value=" + " onClick="give()">
+<input type="button" value=" - " onClick="you()"><br>
+<input type="button" value="CE" onClick="klir()">
+<input type="button" value="=" onClick="up()">
+
+
+<script>
+var numTemp;
+var numTemp2;
+var operation;
+var sagot;
+
+
+function n1(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "1";
+}
+function n2(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "2";
+}
+function n3(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "3";
+}
+function n4(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "4";
+}
+
+
+function n5(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "5";
+}
+function n6(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "6";
+}
+function n7(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "7";
+}
+function n8(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "8";
+}
+function n9(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "9";
+}
+function n0(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + "0";
+}
+function ndot(){
+var num1 = document.getElementById("num1").value;
+document.getElementById("num1").value = num1 + ".";
+}
+
+
+function never(){
+numTemp = parseFloat(document.getElementById("num1").value);
+operation = "multiplication";
+document.getElementById("num1").value = "";
+}
+
+function gonna(){
+numTemp = parseFloat(document.getElementById("num1").value);
+operation = "division";
+document.getElementById("num1").value = "";
+}
+
+function give(){
+numTemp = parseFloat(document.getElementById("num1").value);
+operation = "addition";
+document.getElementById("num1").value = "";
+}
+
+function you(){
+numTemp = parseFloat(document.getElementById("num1").value);
+operation = "subtraction";
+document.getElementById("num1").value = "";
+}
+
+function up(){
+if (operation=="multiplication"){
+sagot = numTemp * parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = sagot;}
+if (operation=="division"){
+sagot = numTemp / parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = sagot;}
+if (operation=="addition"){
+sagot = numTemp + parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = sagot;}
+if (operation=="subtraction"){
+sagot = numTemp - parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = sagot;}
+
+numTemp2 = parseFloat(document.getElementById("num1").value);
+     switch(operation){
+        case "power":
+                answer = Math.pow(numTemp, numTemp2);
+                document.getElementById("num1").value = answer;
+        break;}
+}
+
+function klir(){
+document.getElementById("num1").value = "";
+}
+
+
+
+function round(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.round(numTemp));
+}
+
+function round2(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.ceil(numTemp));
+}
+
+function round3(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.floor(numTemp));
+}
+
+function tcrn(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.trunc(numTemp));
+}
+
+function radikal(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.sqrt(numTemp));
+}
+
+function power(){
+numTemp = parseFloat(document.getElementById("num1").value);
+operation = "power";
+document.getElementById("num1").value = "";
+}
+
+function abss(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.abs(numTemp));
+}
+
+function llag(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.log(numTemp));
+}
+
+function lllag(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.log2(numTemp));
+}
+
+function llllag(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.log10(numTemp));
+}
+
+function ssen(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.sin(numTemp * Math.PI / 180));
+}
+
+function kos(){
+numTemp = parseFloat(document.getElementById("num1").value);
+document.getElementById("num1").value = (Math.cos(numTemp * Math.PI / 180));
+}
+
+</script>
+</body>
+</html>
